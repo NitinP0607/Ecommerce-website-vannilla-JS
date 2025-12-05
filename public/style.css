@@ -160,6 +160,7 @@
     display: flex;
     justify-content: start;
     margin-bottom: 10px;
+    color: #cf4a4a;
 }
 .feature-rating-text img{
     width: 20px;
