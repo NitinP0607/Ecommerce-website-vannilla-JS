@@ -355,15 +355,16 @@ html, body {
     .left-hero {
         width: 100%;
         padding: 0px 15px;
+        margin-bottom: 25px;
     }
     .left-hero h1 {
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 600;
-        margin-bottom: 55px;
+        margin-bottom: 15px;
     }
     .left-hero p{
         font-size: 18px;
-        line-height: 1.25;
+        line-height: 1.5;
         text-align: center;
     }
     .right-hero{
