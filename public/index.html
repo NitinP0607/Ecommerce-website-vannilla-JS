@@ -47,6 +47,7 @@
           <a href="product.html" class="btn">Shop our top brands</a>
         </div>
         <div class="right-hero">
+          <h1>Step of New Trends and Fresh Styles</h1>
           <img src="assets/hero_image.png" alt="Banner" />
         </div>
       </div>
@@ -156,21 +157,20 @@
 
     <div id="footer"></div>
     <script>
+      // Navbar Mobile view functionality
       const hamburger = document.getElementById("hamburgerBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const mobileLinks = mobileMenu.querySelectorAll("a");
+      const mobileMenu = document.querySelector(".nav-links-sm-devices");
 
-      // ✅ OPEN / CLOSE MENU WHEN HAMBURGER IS CLICKED
       hamburger.addEventListener("click", () => {
         mobileMenu.classList.toggle("active");
       });
 
-      // ✅ AUTO CLOSE MENU WHEN ANY LINK IS CLICKED
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.remove("active");
-        });
+      const hamburgerClick = document.getElementById("hamburgerBtn");
+      const hamburgerImg = hamburgerClick.querySelector("img");
+      hamburgerClick.addEventListener("click", () => {
+        hamburgerImg.classList.toggle("rotate");
       });
+
       const featureBoxes = document.querySelectorAll(".feature-box");
 
       const observer = new IntersectionObserver(

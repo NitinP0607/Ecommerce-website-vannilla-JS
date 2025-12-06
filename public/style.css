@@ -282,6 +282,19 @@ html, body {
   .nav-links {
     display: none;
   }
+  .right-hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-hero h1{
+   padding: 25px 15px;
+   display: block;
+   font-size: 30px;
+   font-weight: 600;
+   }
+   .left-hero h1{
+    display: none;
+   }
 }
 
 /* Hero Section */
@@ -408,6 +421,9 @@ html, body {
     }
    .right-hero{
     width: 40%;
+   }
+   .right-hero h1{
+    display: none;
    }
     .right-hero img{
       width: 400px;
