@@ -16,22 +16,35 @@
         <li><a href="#feature-products">Products</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="orders.html">View Orders</a></li>
       </ul>
-      <div class="orders">
-        <a href="orders.html">View Orders</a>
+
+      <div class="mobile-view-nav">
+        <div class="hamburger" id="hamburgerBtn">
+          <img src="assets/cross_navbar_icon.png" alt="" />
+        </div>
+        <ul class="nav-links-sm-devices" id="mobileMenu">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li>
+            <a href="#feature-products" onclick="toggleMenu()">Products</a>
+          </li>
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="orders.html" onclick="toggleMenu()">View Orders</a></li>
+        </ul>
       </div>
     </section>
 
     <section class="hero">
       <div class="hero-container">
         <div class="left-hero">
-          <h1>Welcome to Our Store</h1>
+          <h1>Step of New Trends and Fresh Styles</h1>
           <p>
-            Discover premium products at unbeatable prices, carefully selected
-            to offer you exceptional quality, long-lasting value, and a seamless
-            shopping experience every single time.
+            Praniti Shop is your trusted destination for stylish, high-quality
+            products at prices you will love, designed to bring comfort,
+            confidence, and happiness to your everyday life.
           </p>
-          <a href="product.html" class="btn">Shop Now</a>
+          <a href="product.html" class="btn">Shop our top brands</a>
         </div>
         <div class="right-hero">
           <img src="assets/hero_image.png" alt="Banner" />
@@ -143,6 +156,20 @@
 
     <div id="footer"></div>
     <script>
+      // Navbar Mobile view functionality
+      const hamburger = document.getElementById("hamburgerBtn");
+      const mobileMenu = document.querySelector(".nav-links-sm-devices");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+
+      const hamburgerClick = document.getElementById("hamburgerBtn");
+      const hamburgerImg = hamburgerClick.querySelector("img");
+      hamburgerClick.addEventListener("click", () => {
+        hamburgerImg.classList.toggle("rotate");
+      });
+
       const featureBoxes = document.querySelectorAll(".feature-box");
 
       const observer = new IntersectionObserver(
