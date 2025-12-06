@@ -1,6 +1,9 @@
 /* Reset */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +13,179 @@
     
 }
 
+/* ========== GLOBAL SMOOTH EFFECT ========== */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* ========== NAVBAR ANIMATION ========== */
+.navbar {
+  animation: slideDown 0.8s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav-links li a:hover {
+  color: #ff6600;
+  transform: translateY(-2px);
+}
+
+/* ========== HERO SECTION ANIMATION ========== */
+.left-hero {
+  animation: fadeLeft 1s ease forwards;
+}
+
+.right-hero {
+  animation: fadeRight 1s ease forwards;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========== BUTTON ANIMATION ========== */
+.btn {
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ========== FEATURE PRODUCT CARD HOVER ========== */
+.feature-box {
+  cursor: pointer;
+  transition: 0.4s ease;
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-box:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* ========== IMAGE HOVER ZOOM ========== */
+.feature-box-image img {
+  transition: 0.4s ease;
+}
+
+.feature-box:hover img {
+  transform: scale(1.06);
+}
+
+/* ========== RATING STAR EFFECT ========== */
+.ratings img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* ========== SECTION TITLE ANIMATION ========== */
+.features h2 {
+  position: relative;
+  animation: zoomFade 1s ease forwards;
+}
+
+@keyframes zoomFade {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========== ORDERS BUTTON HOVER ========== */
+.orders a:hover {
+  background: #ff6600;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* ========== SMOOTH PAGE LOAD ========== */
+body {
+  animation: bodyFade 0.9s ease;
+}
+
+@keyframes bodyFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* ========== SCROLL ANIMATION SETUP ========== */
+.feature-box {
+  opacity: 0;
+  transform: translate(60px, 60px); /* X + Y both */
+  transition: all 0.8s ease;
+}
+
+/* When visible on screen */
+.feature-box.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Slight delay effect for each card */
+.feature-box:nth-child(1) { transition-delay: 0.1s; }
+.feature-box:nth-child(2) { transition-delay: 0.2s; }
+.feature-box:nth-child(3) { transition-delay: 0.3s; }
+.feature-box:nth-child(4) { transition-delay: 0.4s; }
+.feature-box:nth-child(5) { transition-delay: 0.5s; }
+.feature-box:nth-child(6) { transition-delay: 0.6s; }
+
+/* Keep your hover floating effect */
+.feature-box:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+
 /* Navbar */
 .navbar {
     width: 100%;
-    background: rgb(114, 127, 136);
+    background: #a794be;
     padding: 15px 30px;
     display: flex;
-   
     justify-content: space-between;
     align-items: center;
 }
@@ -24,7 +193,7 @@
     width: 150px;
 }
 .logo img {
-    width: 100%;
+    width: 150px;
     height: auto;
 }
 .nav-links{
@@ -48,9 +217,10 @@
 .orders a:hover{
     color: #523d3d;
 }
+
 /* Hero Section */
 .hero {
-    background-color: #f1f1f1;
+    background: #cab0e9;
     color: #000;
     width: 100%;
 }
@@ -96,7 +266,7 @@
 }
 
 .btn {
-    padding: 10px 20px;
+    padding: 15px;
     background: #cf4a4a;
     color: #ffffff;
     text-decoration: none;
@@ -120,9 +290,10 @@
     align-items: center;
     justify-content: center;
     padding: 0px 60px;
+    margin-bottom: 25px;
 }
 .features h2{
-   
+   cursor: pointer;
     text-align: center;
     padding: 50px 0px;
     font-size: 56px;
@@ -164,6 +335,7 @@
 }
 .feature-rating-text img{
     width: 20px;
+   
     height: 20px;
     margin-bottom: 25px;
 }
@@ -175,10 +347,40 @@
 }
 .feature-box-image{
     width: 100%;
+    position: relative;
+    top: 0;
+   
 }
 .feature-box-image img{
     width: 100%;
-    height: 280px;
+    height: 290px;
     margin-bottom: 20px;
+    border-radius: 10px;
 
+}
+/* Responsive Design */
+@media (min-width: 300px) and (max-width: 767px) {
+    .navbar{
+        width: 100%;
+       
+    }
+    .hero{
+        width: 100%;
+        padding: 0;
+    }
+    .hero-container{
+        width: 100%;
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+    .left-hero{
+        width: 100%;
+        align-items: center;
+    }
+    .right-hero{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 }
