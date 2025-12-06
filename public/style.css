@@ -237,7 +237,7 @@ html, body {
   display: none;
 }
 .hamburger img {
-  width: 30px;
+  width: 15px;
   cursor: pointer;
   margin-bottom: 15px;
   transition: transform 0.6s ease;
@@ -391,6 +391,7 @@ html, body {
    .left-hero h1{
     width: 100%;
     font-size: 25px;
+    font-weight: 600;
     margin-bottom: 50px;
 
    }
