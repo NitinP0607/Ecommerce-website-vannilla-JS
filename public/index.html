@@ -156,20 +156,21 @@
 
     <div id="footer"></div>
     <script>
-      // Navbar Mobile view functionality
       const hamburger = document.getElementById("hamburgerBtn");
-      const mobileMenu = document.querySelector(".nav-links-sm-devices");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileLinks = mobileMenu.querySelectorAll("a");
 
+      // ✅ OPEN / CLOSE MENU WHEN HAMBURGER IS CLICKED
       hamburger.addEventListener("click", () => {
         mobileMenu.classList.toggle("active");
       });
 
-      const hamburgerClick = document.getElementById("hamburgerBtn");
-      const hamburgerImg = hamburgerClick.querySelector("img");
-      hamburgerClick.addEventListener("click", () => {
-        hamburgerImg.classList.toggle("rotate");
+      // ✅ AUTO CLOSE MENU WHEN ANY LINK IS CLICKED
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+        });
       });
-
       const featureBoxes = document.querySelectorAll(".feature-box");
 
       const observer = new IntersectionObserver(
