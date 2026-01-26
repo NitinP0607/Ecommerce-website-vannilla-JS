@@ -340,6 +340,9 @@ html, body {
 .right-hero {
   width: 50%;
 }
+.right-hero h1{
+    display: none;
+   }
 .right-hero img {
   width: 650px;
   height: 680px;
@@ -422,9 +425,7 @@ html, body {
    .right-hero{
     width: 40%;
    }
-   .right-hero h1{
-    display: none;
-   }
+   
     .right-hero img{
       width: 400px;
       height: auto;
@@ -533,4 +534,85 @@ html, body {
   .feature-box{
     width: 310px;
   }
+}
+
+
+/* Fotter CSS */
+
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 50px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h3 {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+
+.footer-socials {
+  margin-top: 12px;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #bbb;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
 }
